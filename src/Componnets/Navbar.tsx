@@ -12,7 +12,7 @@ export default function Navbar() {
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="#social">Social</a>
-          <a href="#call" className="rounded-full py-2 px-5 bg-orange-600 text-white hover:bg-violet-700">Call me</a>
+          <a href="#call" className="rounded-full py-2 px-5 bg-secandary-100 text-white hover:bg-violet-700">Call me</a>
         </div>
       </div>
     </nav>

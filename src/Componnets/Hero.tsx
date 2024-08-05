@@ -15,7 +15,7 @@ export default function Hero() {
 
             <a
               href="#"
-              className="py-2 px-6 rounded-full bg-pink-600 text-white hover:bg-slate-900 self-center md:self-start "
+              className="py-2 px-6 rounded-full bg-primary text-white hover:bg-slate-900 self-center md:self-start "
             >
               Get Start
             </a>
