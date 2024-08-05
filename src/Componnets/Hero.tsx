@@ -2,7 +2,7 @@ import img from "../assets/images/undraw_undraw_undraw_undraw_flying_drone_u3r2_
 export default function Hero() {
   return (
     <section id="hero">
-      <div className="container mx-auto px-6 space-x-6 flex flex-col-reverse md:flex-row">
+      <div className="container mx-auto px-6 space-x-6 flex flex-col-reverse md:flex-row font-nunito">
           <div className="md:w-1/2 flex flex-col justify-center space-y-5 py-8 text-center md:text-left text-slate-900">
             <h1 className="font-bold text-3xl md:text-5xl ">
               Rapidly build modern websites without ever leaving your HTML.
