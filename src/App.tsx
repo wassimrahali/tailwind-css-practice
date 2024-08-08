@@ -1,4 +1,5 @@
 import Author from "./Componnets/Author"
+import Footer from "./Componnets/Footer"
 import Hero from "./Componnets/Hero"
 import Navbar from "./Componnets/Navbar"
 
@@ -10,6 +11,7 @@ function App() {
     <Navbar />
     <Hero />
     <Author />
+    <Footer />
     </>
   )
 }

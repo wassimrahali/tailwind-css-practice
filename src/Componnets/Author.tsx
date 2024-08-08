@@ -1,4 +1,3 @@
-import React from 'react'
 import img from '../assets/images/adam.f69b0b90.jpg'
 export default function Author() {
   return (
