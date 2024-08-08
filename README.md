@@ -1,7 +1,4 @@
 
-Sure! Here's a sample README for your project:
-
-TailwindCSS Project
 Welcome to my first project using TailwindCSS! 🎉
 
 About
