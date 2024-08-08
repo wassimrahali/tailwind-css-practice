@@ -1,4 +1,4 @@
-import img from "../assets/images/img.svg";
+import img from "../assets/images/undraw_undraw_undraw_undraw_undraw_undraw_undraw_undraw_undraw_walking_together_7ulo_m7i2_l2pa_rcwe_-1-_apsm_-1-_w8ef_-1-_n46j_la5v_-1-_718m.svg";
 export default function Hero() {
   return (
     <section id="hero">
@@ -17,7 +17,7 @@ export default function Hero() {
               href="#"
               className="py-2 px-6 rounded-full bg-primary text-white hover:bg-slate-900 self-center md:self-start "
             >
-              Get Start
+              Get Started
             </a>
             </div>
 
