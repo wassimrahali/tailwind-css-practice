@@ -8,6 +8,11 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const handleLogin = () => {
+    // Redirect to the login route on the Express server
+    window.location.href = 'http://localhost:3000/login';
+  };
+
   return (
     <nav className="container mx-auto p-6">
       <div className="flex items-center justify-between">
@@ -37,7 +42,7 @@ export default function Navbar() {
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="#social">Social</a>
-          <a href="#call" className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Call me</a>
+          <button  onClick={handleLogin} className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Call me</button>
         </div>
       </div>
       <div className={`drop-shadow-lg space-y-4 font-bold items-center absolute flex flex-col bg-gray-50 py-8 left-8 right-6 top-16 md:hidden ${isOpen ? 'flex' : 'hidden'}`}>
@@ -45,7 +50,7 @@ export default function Navbar() {
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#social">Social</a>
-        <a href="#call" className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Call me</a>
+        <button  onClick={handleLogin} className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Call me </button>
       </div>
     </nav>
   );
