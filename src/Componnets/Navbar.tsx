@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/images/undraw_undraw_undraw_undraw_flying_drone_u3r2_-3-_egfy_-1-_2xjb_-1-_2hl5.svg';
 
 export default function Navbar() {
@@ -11,14 +11,13 @@ export default function Navbar() {
 
   const handleLogin = () => {
     console.log('Login button clicked'); // Logs when the login button is clicked
-    // Redirect to the login route on the Express server
-    window.location.href = 'http://localhost:3000/login';
-  };
 
-  const handleLogout = () => {
-    console.log('Logout button clicked'); // Logs when the logout button is clicked
-    // Redirect to the logout route on the Express server
-    window.location.href = 'http://localhost:3000/logout';
+    // Debugging: Check if the URL is correct
+    const loginUrl = 'http://localhost:3000/login';
+    console.log('Redirecting to:', loginUrl);
+
+    // Redirect to the login route on the Express server
+    window.location.href = loginUrl;
   };
 
   return (
@@ -51,7 +50,6 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
           <a href="#social">Social</a>
           <button onClick={handleLogin} className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Login</button>
-          <button onClick={handleLogout} className="rounded-full py-2 px-5 bg-red-500 text-white hover:bg-red-700">Logout</button>
         </div>
       </div>
       <div className={`drop-shadow-lg space-y-4 font-bold items-center absolute flex flex-col bg-gray-50 py-8 left-8 right-6 top-16 md:hidden ${isOpen ? 'flex' : 'hidden'}`}>
@@ -60,7 +58,6 @@ export default function Navbar() {
         <a href="#contact">Contact</a>
         <a href="#social">Social</a>
         <button onClick={handleLogin} className="rounded-full py-2 px-5 bg-primary text-white hover:bg-slate-700">Login</button>
-        <button onClick={handleLogout} className="rounded-full py-2 px-5 bg-red-500 text-white hover:bg-red-700">Logout</button>
       </div>
     </nav>
   );
