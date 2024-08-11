@@ -41,23 +41,8 @@ async function handleLogin(req, res) {
 // Connect the handleLogin function to a route
 app.get('/login', handleLogin);
 
-// Async function to handle logout
-async function handleLogout(req, res) {
-    try {
-        // Logout by terminating the current session
-        await account.deleteSession('current'); // Use 'current' to delete the current session
-        res.redirect('/');
-    } catch (error) {
-        console.error('Error during logout:', error);
-        res.redirect('/fail');
-    }
-}
-
-// Connect the handleLogout function to a route
-app.get('/logout', handleLogout);
-
 // Start the server on port 3000
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
