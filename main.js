@@ -1,14 +1,18 @@
 import express from 'express';
+import cors from 'cors';
 import { Client, Account } from 'appwrite';
 
 const app = express(); // Create an Express application
+
+// Enable CORS
+app.use(cors());
 
 // Initialize Appwrite client
 const client = new Client();
 
 client
     .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('66b7f3b9001a2eb6de81');
+    .setProject('839153207253-bquhdfp83hag774vprjjat3');
 
 // Initialize Appwrite Account service
 const account = new Account(client);
@@ -36,6 +40,21 @@ async function handleLogin(req, res) {
 
 // Connect the handleLogin function to a route
 app.get('/login', handleLogin);
+
+// Async function to handle logout
+async function handleLogout(req, res) {
+    try {
+        // Logout by terminating the current session
+        await account.deleteSession('current'); // Use 'current' to delete the current session
+        res.redirect('/');
+    } catch (error) {
+        console.error('Error during logout:', error);
+        res.redirect('/fail');
+    }
+}
+
+// Connect the handleLogout function to a route
+app.get('/logout', handleLogout);
 
 // Start the server on port 3000
 const PORT = 3000;
